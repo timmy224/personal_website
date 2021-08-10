@@ -1,0 +1,150 @@
+/* Call to Action Button */
+.cta-btn {
+  display: inline-block;
+  position: relative;
+  padding: 0.8rem; 
+  font-weight: bold;
+  line-height: 1;
+  z-index: 1;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+  }
+}
+
+/* Hero Style */
+.cta-btn--hero {
+  @include supportColorForIE11Hero();
+  border: 1px solid $white-color;
+  border-image-slice: 1;
+
+  &::after {
+    background-color: $white-color;
+
+    @include respond(phone) {
+      background-image: none;
+      -webkit-text-fill-color: $secondary-color;
+    }
+  }
+
+  &:hover {
+    -webkit-text-fill-color: $primary-color;
+    text-decoration: none;
+
+    @include respond(phone) {
+      background-image: none;
+      -webkit-text-fill-color: $secondary-color;
+    }
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+/* Resume Style */
+.cta-btn--resume {
+  border: 1px solid $white-color;
+  color: $white-color;
+  background: $primary-color;
+  background-image: linear-gradient(
+    135deg,
+    $primary-color 0%,
+    $secondary-color 100%
+  );
+
+  &::after {
+    background: $white;
+    @include respond(phone) {
+      background-image: none;
+      -webkit-text-fill-color: $secondary-color;
+    }
+
+  }
+
+  &:hover {
+    color: $navy-blue;
+    text-decoration: none;
+
+    @include respond(phone) {
+      background-image: none;
+      -webkit-text-fill-color: $secondary-color;
+    }
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+// .cta-btn--white {
+//   border: 1px solid $white-color;
+//   color: $white-color;
+//   background: $primary-color;
+//   background-image: linear-gradient(
+//     135deg,
+//     $primary-color 0%,
+//     $secondary-color 100%
+//   );
+
+//   &::after {
+//     background: $white;
+//     @include respond(phone) {
+//       background-image: none;
+//       -webkit-text-fill-color: $secondary-color;
+//     }
+
+//   }
+
+//   &:hover {
+//     color: $navy-blue;
+//     text-decoration: none;
+
+//     @include respond(phone) {
+//       background-image: none;
+//       -webkit-text-fill-color: $secondary-color;
+//     }
+
+//     &::after {
+//       width: 100%;
+//     }
+//   }
+// }
+/* Arrow Button */
+.up i {
+  color: #272727;
+}
+
+.demo {
+  margin-left: 5px;
+}
+
+// about section 
+.about-btn {
+  color: white;
+
+  @include respond(phone) {
+    padding: 0 auto;
+  }
+
+}
+
+// skills section
+// .skills-btn-1 {
+//   margin-bottom: 10px;
+// }
+
+.skills-btn {
+  margin-bottom: 10px;
+}
+
+
