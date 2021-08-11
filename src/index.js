@@ -18,9 +18,13 @@ $('a[href^="#"]').on("click", function (event) {
 });
 
 // remove white border for mobile view skills click
-$(".skills-btn").on("click", () => {
+$(".skills-btn").on("click", (event) => {
+  let el = event.target.querySelector("i");
+  $(el).toggleClass("fa-chevron-up fa-chevron-down");
   $("[id$=target]").removeClass("skills-border");
 });
+
+
 
 function addResume(pdf) {
   if (!pdf) return;
