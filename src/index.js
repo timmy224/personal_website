@@ -29,7 +29,8 @@ $(document).ready(() => {
       $(el).removeClass("fa-chevron-down");
       $(el).addClass(" fa-chevron-up");
     }
-    //$(el).toggleClass("fa-chevron-up fa-chevron-down");
+
+    // remove white border on mobile
     $("[id$=target]").removeClass("skills-border");
   });
   
