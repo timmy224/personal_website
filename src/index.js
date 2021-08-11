@@ -22,7 +22,14 @@ $(document).ready(() => {
   // remove white border for mobile view skills click
   $(".skills-btn").on("click", (event) => {
     let el = event.target.querySelector("i");
-    $(el).toggleClass("fa-chevron-up fa-chevron-down");
+    if ($(el).hasClass("fa-chevron-up")) {
+      $(el).removeClass("fa-chevron-up");
+      $(el).addClass(" fa-chevron-down");
+    } else {
+      $(el).removeClass("fa-chevron-down");
+      $(el).addClass(" fa-chevron-up");
+    }
+    //$(el).toggleClass("fa-chevron-up fa-chevron-down");
     $("[id$=target]").removeClass("skills-border");
   });
   
