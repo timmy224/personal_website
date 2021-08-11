@@ -3,6 +3,7 @@
   color: $white-color;
   margin-top: -10rem;
   padding-top: 15rem;
+  padding-bottom: 1rem;
 
   @include respond(tab-land) {
     margin-top: 0;
@@ -100,5 +101,3 @@
     }
   }
 }
-
-
