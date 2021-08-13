@@ -19,16 +19,16 @@ $(document).ready(() => {
     }
   });
   
-  // remove white border for mobile view skills click
   $(".skills-btn").on("click", (event) => {
-    let el = event.target.querySelector("i");
-    if ($(el).hasClass("fa-chevron-up")) {
-      $(el).removeClass("fa-chevron-up");
-      $(el).addClass(" fa-chevron-down");
-    } else {
-      $(el).removeClass("fa-chevron-down");
-      $(el).addClass(" fa-chevron-up");
-    }
+    // toggle chevron
+    // let el = event.target.querySelector("i");
+    // if ($(el).hasClass("fa-chevron-up")) {
+    //   $(el).removeClass("fa-chevron-up");
+    //   $(el).addClass(" fa-chevron-down");
+    // } else {
+    //   $(el).removeClass("fa-chevron-down");
+    //   $(el).addClass(" fa-chevron-up");
+    // }
 
     // remove white border on mobile
     $("[id$=target]").removeClass("skills-border");
